@@ -16,7 +16,6 @@ base = [[0,h],[0,0],[-r_base,0], [r_base,0]]
 verts = [[0,0],[0,h],[-r,h], [r,h]]
 
 rot_verts = lambda t: np.dot(rot(t), np.array(verts).T).T + np.array([0,h])
-rot_verts_for_plot = lambda p: zip(*p)
 
 l = lambda t: np.linalg.norm(rot_verts(t)[2:4]-base[2:4],axis=1)
 
